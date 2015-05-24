@@ -33,14 +33,44 @@ textarea {
     padding: 10px;
 }
 
-.header {
+.scheduler-header-container {
+    padding: 10px;
+}
+
+.scheduler-header {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     color: #004756;
     background: #ffffff;
     padding: 10px;
-    width: 183.333333333333px;
+    width: 130px;
     float: left;
-    margin: 5px;
+    margin: 5px 10px;
+}
+
+.scheduler-side {
+    width: 300px;    
+}
+
+.scheduler-main {
+    width: 850px;
+    min-height: 500px;
+    overflow-x: auto;
+}
+
+.scheduler-main-inner {
+    width: 1000px;
+}
+
+.scheduler-table {
+    padding: 5px 10px;
+}
+
+.scheduler-cell {
+    margin: 3px 5px;
+    border: 1px dashed #ccc;
+    width: 140px;
+    height: 44px;
+    float: left;
 }

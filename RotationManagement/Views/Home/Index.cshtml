@@ -3,20 +3,60 @@
 }
 
 <div class="row" data-ng-app="RotationMgmtModule" data-ng-controller="RotationMgmtCtrl">
-    <div style="padding: 5px">
-        <div class="header">Header</div>
-        <div class="header">Header</div>
-        <div class="header">Header</div>
-        <div class="header">Header</div>
-        <div class="header">Header</div>
-        <div class="header">Header</div>
+    <div class="scheduler-side col-xs-2">
+        
     </div>
-    <div class="clearfix"></div>
-    <div gridster="gridsterOpts">
-        <ul>
-            <li gridster-item="item" ng-repeat="item in standardItems"></li>
-        </ul>
-    </div>
+    <div class="scheduler-main">
+        <div class="scheduler-main-inner">
+            <div class="scheduler-header-container">
+                <div class="scheduler-header">January</div>
+                <div class="scheduler-header">February</div>
+                <div class="scheduler-header">March</div>
+                <div class="scheduler-header">April</div>
+                <div class="scheduler-header">May</div>
+                <div class="scheduler-header">June</div>
+            </div>
+            <div class="clearfix"></div>
+            <div gridster="gridsterOpts">
+                <div class="scheduler-table">
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="clearfix"></div>
+
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="clearfix"></div>
+
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="clearfix"></div>
+
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="scheduler-cell"></div>
+                    <div class="clearfix"></div>
+                </div>                
+                <ul>
+                    <li gridster-item="item" ng-repeat="item in standardItems"></li>
+                </ul>
+            </div>
+        </div>        
+    </div>    
 </div>
 
 @section scripts

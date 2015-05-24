@@ -8,7 +8,11 @@ angular.module("RotationMgmtModule").controller("RotationMgmtCtrl", [
             floating: false,
             resizable: {
                 handles: ['e', 'w']
-            }
+            },
+            swapping: true,
+            colWidth: 150,
+            rowHeight: 50,
+            margins: [12, 20]
         };
 
         $scope.standardItems = [
@@ -18,7 +22,7 @@ angular.module("RotationMgmtModule").controller("RotationMgmtCtrl", [
           { sizeX: 1, sizeY: 1, row: 0, col: 5 },
           { sizeX: 2, sizeY: 1, row: 1, col: 0 },
           { sizeX: 1, sizeY: 1, row: 1, col: 4 },
-          { sizeX: 1, sizeY: 2, row: 1, col: 5 },
+          //{ sizeX: 1, sizeY: 2, row: 1, col: 5 },
           { sizeX: 1, sizeY: 1, row: 2, col: 0 },
           { sizeX: 2, sizeY: 1, row: 2, col: 1 },
           { sizeX: 1, sizeY: 1, row: 2, col: 3 },
