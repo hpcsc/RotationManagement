@@ -51,14 +51,14 @@ textarea {
 
 .scheduler-side {
     width: 300px;
-    min-height: 500px;
+    min-height: 350px;
     float: left;    
     margin-top: 60px;
 }
 
 .scheduler-main {
     width: 850px;
-    min-height: 500px;
+    min-height: 350px;
     overflow-x: auto;
 }
 
@@ -87,4 +87,8 @@ textarea {
     background: #ffffff;
     padding: 10px;        
     margin: 10px;    
+}
+
+.remove-assignment-icon {
+    cursor: pointer;
 }

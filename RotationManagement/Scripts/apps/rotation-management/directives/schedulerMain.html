@@ -12,7 +12,13 @@
                 </div>
             </div>
             <ul>
-                <li gridster-item="assignment" data-ng-repeat="assignment in assignments" data-ng-style="{'background-color': assignment.color, 'color': 'white'}">{{assignment.text}}</li>
+                <li gridster-item="assignment"
+                    data-ng-repeat="assignment in assignments"
+                    data-ng-style="{'background-color': '#' + assignment.color, 'color': 'white'}"
+                    data-ng-dblclick="openUpdateAssignment(assignment)">
+                    {{assignment.text}}
+                    <span class="glyphicon glyphicon-remove pull-right remove-assignment-icon" data-ng-click="remove(assignment)"></span>
+                </li>
             </ul>
         </div>
     </div>  
@@ -30,4 +36,17 @@
             <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
         </div>
     </script>    
+
+    <script type="text/ng-template" id="updateAssignmentTmpl.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Update assignment</h3>
+        </div>
+        <div class="modal-body">
+            <select class="form-control" data-ng-model="selectedTask" data-ng-options="o.text for o in availableTasks"></select>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="update()">Update</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script> 
 </div>

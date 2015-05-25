@@ -2,10 +2,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="row" data-ng-app="RotationMgmtModule" data-ng-controller="RotationMgmtCtrl">
+<div class="row" data-ng-app="RotationMgmtModule" data-ng-controller="RotationMgmtCtrl" data-ng-init="init()">
     <scheduler data-row-headers="rowHeaders"
                data-column-headers="columnHeaders" 
-               data-assignments="assignments"></scheduler>        
+               data-assignments="assignments"></scheduler>   
+    
+    <div class="clearfix" ></div>
+    <div class="col-xs-12 text-center">
+        <button class="btn btn-primary" style="margin-top: 20px" data-ng-click="update()">Update</button>
+    </div>     
 </div>
 
 @section scripts
@@ -17,6 +22,7 @@
 <script src="~/Scripts/angular-gridster.min.js"></script>
 <script src="~/Scripts/apps/rotation-management/rotationMgmtModule.js"></script>
 <script src="~/Scripts/apps/rotation-management/controllers/rotationMgmtCtrl.js"></script>
+<script src="~/Scripts/apps/rotation-management/services/rotationMgmtDataService.js"></script>
 <script src="~/Scripts/apps/rotation-management/directives/scheduler.js"></script>
 <script src="~/Scripts/apps/rotation-management/directives/schedulerMain.js"></script>
 <script src="~/Scripts/apps/rotation-management/directives/schedulerSide.js"></script>
