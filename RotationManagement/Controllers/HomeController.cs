@@ -86,6 +86,7 @@ namespace RotationManagement.Controllers
         {
             try
             {
+                deletedIds = deletedIds ?? new List<int>();
                 var idsToGet = new List<int>(deletedIds);
                 var updateIds = new List<int>(assignments.Select(s => s.AssignmentId)).Distinct();
                 idsToGet.AddRange(updateIds);
@@ -124,7 +125,7 @@ namespace RotationManagement.Controllers
             }
             catch(Exception ex)
             {
-                return Json(new { success = false, errors = ex.ToString() });
+                return Json(new { success = false, errors = new string[] { ex.ToString() } });
             }
 
 

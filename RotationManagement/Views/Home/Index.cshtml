@@ -11,15 +11,19 @@
     <div class="col-xs-12 text-center">
         <button class="btn btn-primary" style="margin-top: 20px" data-ng-click="update()">Update</button>
     </div>     
+
+    <toaster-container></toaster-container>
 </div>
 
 @section scripts
 {    
     <script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
 <script src="~/Scripts/angular-ui/ui-bootstrap.min.js"></script>
 <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 <script src="~/Scripts/jquery.resize.js"></script>
 <script src="~/Scripts/angular-gridster.min.js"></script>
+<script src="~/Scripts/toaster.min.js"></script>
 <script src="~/Scripts/apps/rotation-management/rotationMgmtModule.js"></script>
 <script src="~/Scripts/apps/rotation-management/controllers/rotationMgmtCtrl.js"></script>
 <script src="~/Scripts/apps/rotation-management/services/rotationMgmtDataService.js"></script>
@@ -32,4 +36,5 @@
 {
 <link href="~/Content/angular-gridster.min.css" rel="stylesheet" />
 <link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
+<link href="~/Content/toaster.min.css" rel="stylesheet" />
 }

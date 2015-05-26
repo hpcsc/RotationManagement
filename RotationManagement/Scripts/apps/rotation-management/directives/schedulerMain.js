@@ -82,8 +82,8 @@ angular.module("RotationMgmtModule").directive("schedulerMain", ["$modal",
     }
 ]);
 
-angular.module('RotationMgmtModule').controller('CreateModalInstanceCtrl', ["$scope", "$modalInstance", "rotationMgmtDataService",
-    function ($scope, $modalInstance, rotationMgmtDataService) {
+angular.module('RotationMgmtModule').controller('CreateModalInstanceCtrl', ["$scope", "$modalInstance", "rotationMgmtDataService", "toaster",
+    function ($scope, $modalInstance, rotationMgmtDataService, toaster) {
 
         $scope.availableTasks = [];
 
@@ -91,7 +91,7 @@ angular.module('RotationMgmtModule').controller('CreateModalInstanceCtrl', ["$sc
         .then(function (data) {
             $scope.availableTasks = data;
         }, function (err) {
-            alert(err);
+            toaster.pop("error", "Error", err);
         });
 
     $scope.selectedTask = null;
@@ -105,8 +105,8 @@ angular.module('RotationMgmtModule').controller('CreateModalInstanceCtrl', ["$sc
     };
 }]);
 
-angular.module('RotationMgmtModule').controller('UpdateModalInstanceCtrl', ["$scope", "$modalInstance", "current", "rotationMgmtDataService",
-    function ($scope, $modalInstance, current, rotationMgmtDataService) {
+angular.module('RotationMgmtModule').controller('UpdateModalInstanceCtrl', ["$scope", "$modalInstance", "current", "rotationMgmtDataService", "toaster",
+    function ($scope, $modalInstance, current, rotationMgmtDataService, toaster) {
         $scope.availableTasks = [];
 
         rotationMgmtDataService.getAvailableRotations()
@@ -119,7 +119,7 @@ angular.module('RotationMgmtModule').controller('UpdateModalInstanceCtrl', ["$sc
                 }
             }
         }, function (err) {
-            alert(err);
+            toaster.pop("error", "Error", err);
         });
 
         $scope.selectedTask = null;

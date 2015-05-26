@@ -1,3 +1,5 @@
 /RotationManagement/bin
 /RotationManagement/obj
+/RotationManagement/App_Data/RotationMgmt.mdf
+/RotationManagement/App_Data/RotationMgmt_log.ldf
 RotationManagement.v12.suo

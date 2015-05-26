@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 angular.module("RotationMgmtModule").controller("RotationMgmtCtrl", [
-    "$scope", "rotationMgmtDataService", function ($scope, rotationMgmtDataService) {
+    "$scope", "rotationMgmtDataService", "toaster", function ($scope, rotationMgmtDataService, toaster) {
 
         $scope.columnHeaders = [
             { text: "January" },
@@ -51,7 +51,7 @@ angular.module("RotationMgmtModule").controller("RotationMgmtCtrl", [
                                            }
                                        }
                                    }, function (error) {
-                                       alert(error);
+                                       toaster.pop('error', 'Error', error);
                                    });
         };
 
@@ -76,9 +76,9 @@ angular.module("RotationMgmtModule").controller("RotationMgmtCtrl", [
                 assignments: data,
                 deletedIds: deletedIds
             }).then(function (data) {
-                alert("Schedule updated");
+                toaster.pop('success', 'Success', "Schedule updated");
             }, function (error) {
-                alert("Failed to update schedule: " + error);
+                toaster.pop('error', 'Error', "Failed to update schedule: " + error);
             })
         };
 

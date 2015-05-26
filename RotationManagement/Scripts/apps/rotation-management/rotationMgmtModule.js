@@ -1,5 +1,5 @@
 ﻿"use strict";
 
 (function() {
-    angular.module("RotationMgmtModule", ["gridster", "ui.bootstrap"]);
+    angular.module("RotationMgmtModule", ["ngAnimate", "gridster", "ui.bootstrap", "toaster"]);
 })();
