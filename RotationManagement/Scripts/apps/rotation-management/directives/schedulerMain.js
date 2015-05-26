@@ -16,6 +16,7 @@ angular.module("RotationMgmtModule").directive("schedulerMain", ["$modal",
 
                 $scope.gridsterOpts = {
                     columns: $scope.columnHeaders.length,
+                    maxRows: $scope.rowHeaders.length,
                     pushing: false,
                     floating: false,
                     swapping: true,
